@@ -357,361 +357,1359 @@
     <div class="container">
         <h2 class="section-heading">Our Specialties</h2>
         <div class="row g-4">
-            <?php
-            $specialties = [
-                [
-                    'name' => 'General Medicine',
-                    'icon' => 'fa-stethoscope',
-                    'description' => 'Our General Medicine department provides comprehensive primary healthcare services for adults. We handle:<br><br>
-• Common illnesses (fever, flu, infections)<br>
-• Chronic disease management (diabetes, hypertension)<br>
-• Preventive care and health screenings<br>
-• Routine check-ups and vaccinations<br><br>
-<strong>When to visit:</strong> For general health concerns, regular check-ups, or when you\'re unsure which specialist to see first.',
-                    'doctors' => ['Dr. John Smith', 'Dr. Maria Garcia']
-                ],
-                [
-                    'name' => 'Pediatrics',
-                    'icon' => 'fa-child',
-                    'description' => 'Our Pediatrics department specializes in the health care of infants, children, and adolescents from birth to age 18. Services include:<br><br>
-• Well-child visits and development monitoring<br>
-• Childhood immunizations<br>
-• Treatment of common childhood illnesses<br>
-• Growth and development assessment<br><br>
-<strong>When to visit:</strong> For regular check-ups, vaccinations, or when your child is sick or showing concerning symptoms.',
-                    'doctors' => ['Dr. Sarah Johnson', 'Dr. Michael Chen']
-                ],
-                [
-                    'name' => 'Cardiology',
-                    'icon' => 'fa-heart-pulse',
-                    'description' => 'Our Cardiology department focuses on heart and blood vessel conditions. We treat:<br><br>
-• Heart disease and heart attacks<br>
-• High blood pressure<br>
-• Irregular heartbeat (arrhythmia)<br>
-• Heart valve problems<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Chest pain or discomfort<br>
-• Shortness of breath<br>
-• Irregular heartbeat<br>
-• Dizziness or fainting<br><br>
-<strong>When to visit:</strong> If you experience any heart-related symptoms or have a family history of heart disease.',
-                    'doctors' => ['Dr. Robert Williams', 'Dr. Emily Brown']
-                ],
-                [
-                    'name' => 'Dermatology',
-                    'icon' => 'fa-allergies',
-                    'description' => 'Our Dermatology department treats conditions affecting the skin, hair, and nails. We handle:<br><br>
-• Acne and other skin conditions<br>
-• Skin cancer screening and treatment<br>
-• Eczema and psoriasis<br>
-• Hair loss problems<br><br>
-<strong>When to visit:</strong> If you notice unusual skin changes, persistent rashes, or want a skin cancer screening.',
-                    'doctors' => ['Dr. Lisa Anderson', 'Dr. David Kim']
-                ],
-                [
-                    'name' => 'Obstetrics and Gynecology',
-                    'icon' => 'fa-person-pregnant',
-                    'description' => 'Our OB-GYN department provides comprehensive women\'s healthcare services including:<br><br>
-• Pregnancy care and delivery<br>
-• Fertility treatments<br>
-• Regular women\'s health screenings<br>
-• Menstrual disorders<br>
-• Menopause management<br><br>
-<strong>When to visit:</strong> For annual check-ups, pregnancy care, or any reproductive health concerns.',
-                    'doctors' => ['Dr. Jennifer Lee', 'Dr. Patricia Martinez']
-                ],
-                [
-                    'name' => 'Orthopedics',
-                    'icon' => 'fa-bone',
-                    'description' => 'Our Orthopedics department specializes in musculoskeletal conditions. We treat:<br><br>
-• Joint pain and arthritis<br>
-• Sports injuries<br>
-• Fractures and sprains<br>
-• Back and neck pain<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Persistent joint pain<br>
-• Limited range of motion<br>
-• Swelling or stiffness<br><br>
-<strong>When to visit:</strong> If you have ongoing joint pain, injuries, or mobility issues.',
-                    'doctors' => ['Dr. James Wilson', 'Dr. Thomas Moore']
-                ],
-                [
-                    'name' => 'Psychiatry',
-                    'icon' => 'fa-brain',
-                    'description' => 'Our Psychiatry department provides mental health care and support. We help with:<br><br>
-• Depression and anxiety<br>
-• Stress management<br>
-• Behavioral disorders<br>
-• Sleep disorders<br>
-• Addiction treatment<br><br>
-<strong>When to visit:</strong> If you\'re experiencing emotional distress, mood changes, anxiety, or other mental health concerns.',
-                    'doctors' => ['Dr. Elizabeth Taylor', 'Dr. Richard White']
-                ],
-                [
-                    'name' => 'Surgery',
-                    'icon' => 'fa-user-doctor',
-                    'description' => 'Our Surgery department performs various surgical procedures including:<br><br>
-• General surgery<br>
-• Minimally invasive procedures<br>
-• Emergency surgery<br>
-• Pre and post-operative care<br><br>
-<strong>When to visit:</strong> When referred by your primary care physician or specialist for surgical evaluation.',
-                    'doctors' => ['Dr. William Turner', 'Dr. Charles Davis']
-                ],
-                [
-                    'name' => 'Neurology',
-                    'icon' => 'fa-head-side-virus',
-                    'description' => 'Our Neurology department treats disorders of the nervous system. We handle:<br><br>
-• Headaches and migraines<br>
-• Seizure disorders<br>
-• Multiple sclerosis<br>
-• Stroke care<br>
-• Memory disorders<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Severe headaches<br>
-• Dizziness or balance problems<br>
-• Numbness or tingling<br>
-• Memory problems<br><br>
-<strong>When to visit:</strong> If you experience neurological symptoms or have concerns about brain health.',
-                    'doctors' => ['Dr. Andrew Clark', 'Dr. Susan Wright']
-                ],
-                [
-                    'name' => 'Ophthalmology',
-                    'icon' => 'fa-eye',
-                    'description' => 'Our Ophthalmology department provides comprehensive eye care services including:<br><br>
-• Vision testing and correction<br>
-• Cataract surgery<br>
-• Glaucoma treatment<br>
-• Diabetic eye care<br><br>
-<strong>When to visit:</strong> For regular eye check-ups, vision problems, or eye discomfort.',
-                    'doctors' => ['Dr. Kevin Park', 'Dr. Nancy Rodriguez']
-                ],
-                [
-                    'name' => 'Otolaryngology (ENT)',
-                    'icon' => 'fa-ear-listen',
-                    'description' => 'Our ENT department treats ear, nose, and throat conditions including:<br><br>
-• Hearing problems<br>
-• Sinus infections<br>
-• Voice disorders<br>
-• Sleep apnea<br>
-• Allergies<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Hearing loss<br>
-• Chronic sinus problems<br>
-• Frequent sore throats<br>
-• Difficulty swallowing<br><br>
-<strong>When to visit:</strong> If you have persistent problems with your ears, nose, or throat.',
-                    'doctors' => ['Dr. Daniel Lewis', 'Dr. Laura Martinez']
-                ],
-                [
-                    'name' => 'Endocrinology',
-                    'icon' => 'fa-flask',
-                    'description' => 'Our Endocrinology department treats hormone-related disorders including:<br><br>
-• Diabetes management<br>
-• Thyroid disorders<br>
-• Hormone imbalances<br>
-• Metabolic disorders<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Unexplained weight changes<br>
-• Fatigue<br>
-• Excessive thirst<br>
-• Temperature sensitivity<br><br>
-<strong>When to visit:</strong> If you have hormone-related symptoms or diabetes.',
-                    'doctors' => ['Dr. Michelle Wong', 'Dr. Steven Baker']
-                ],
-                [
-                    'name' => 'Urology',
-                    'icon' => 'fa-pills',
-                    'description' => 'Our Urology department specializes in urinary tract and male reproductive system conditions:<br><br>
-• Urinary tract infections<br>
-• Kidney stones<br>
-• Prostate problems<br>
-• Bladder issues<br>
-• Male fertility concerns<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Frequent urination<br>
-• Pain during urination<br>
-• Blood in urine<br>
-• Lower back pain<br><br>
-<strong>When to visit:</strong> If you experience urinary problems or male reproductive health concerns.',
-                    'doctors' => ['Dr. Christopher Lee', 'Dr. Amanda Thompson']
-                ],
-                [
-                    'name' => 'Oncology',
-                    'icon' => 'fa-ribbon',
-                    'description' => 'Our Oncology department provides comprehensive cancer care including:<br><br>
-• Cancer diagnosis and staging<br>
-• Chemotherapy<br>
-• Radiation therapy<br>
-• Cancer screening<br>
-• Survivorship care<br><br>
-<strong>When to visit:</strong> If you have been diagnosed with cancer or need cancer screening.',
-                    'doctors' => ['Dr. Rachel Green', 'Dr. Mark Johnson']
-                ],
-                [
-                    'name' => 'Pulmonology',
-                    'icon' => 'fa-lungs',
-                    'description' => 'Our Pulmonology department treats respiratory conditions including:<br><br>
-• Asthma<br>
-• COPD<br>
-• Pneumonia<br>
-• Sleep apnea<br>
-• Lung cancer screening<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Shortness of breath<br>
-• Chronic cough<br>
-• Wheezing<br>
-• Sleep problems<br><br>
-<strong>When to visit:</strong> If you have breathing difficulties or persistent respiratory symptoms.',
-                    'doctors' => ['Dr. Paul White', 'Dr. Sandra Miller']
-                ],
-                [
-                    'name' => 'Rheumatology',
-                    'icon' => 'fa-hand',
-                    'description' => 'Our Rheumatology department treats autoimmune and joint conditions including:<br><br>
-• Rheumatoid arthritis<br>
-• Lupus<br>
-• Osteoarthritis<br>
-• Fibromyalgia<br>
-• Gout<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Joint pain and swelling<br>
-• Morning stiffness<br>
-• Fatigue<br>
-• Muscle weakness<br><br>
-<strong>When to visit:</strong> If you have persistent joint pain or autoimmune symptoms.',
-                    'doctors' => ['Dr. George Brown', 'Dr. Helen Martinez']
-                ],
-                [
-                    'name' => 'Gastroenterology',
-                    'icon' => 'fa-pills',
-                    'description' => 'Our Gastroenterology department specializes in digestive system disorders including:<br><br>
-• Acid reflux (GERD)<br>
-• Inflammatory bowel disease<br>
-• Celiac disease<br>
-• Liver problems<br>
-• Colon cancer screening<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Chronic stomach pain<br>
-• Heartburn<br>
-• Changes in bowel habits<br>
-• Unexplained weight loss<br>
-• Difficulty swallowing<br><br>
-<strong>When to visit:</strong> If you experience persistent digestive issues or need colon cancer screening.',
-                    'doctors' => ['Dr. Frank Wilson', 'Dr. Diana Clark']
-                ],
-                [
-                    'name' => 'Nephrology',
-                    'icon' => 'fa-hospital-user',
-                    'description' => 'Our Nephrology department focuses on kidney health and diseases including:<br><br>
-• Chronic kidney disease<br>
-• Kidney stones<br>
-• Hypertension<br>
-• Dialysis care<br>
-• Electrolyte disorders<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Changes in urination<br>
-• Swelling in legs or feet<br>
-• High blood pressure<br>
-• Fatigue<br>
-• Lower back pain<br><br>
-<strong>When to visit:</strong> If you have kidney problems, persistent urinary issues, or difficult-to-control blood pressure.',
-                    'doctors' => ['Dr. Howard Chen', 'Dr. Julia Santos']
-                ],
-                [
-                    'name' => 'Hematology',
-                    'icon' => 'fa-droplet',
-                    'description' => 'Our Hematology department treats blood disorders including:<br><br>
-• Anemia<br>
-• Blood clotting disorders<br>
-• Leukemia<br>
-• Lymphoma<br>
-• Blood cancers<br><br>
-<strong>Common symptoms to watch for:</strong><br>
-• Unusual bleeding or bruising<br>
-• Fatigue<br>
-• Weakness<br>
-• Frequent infections<br><br>
-<strong>When to visit:</strong> If you have abnormal blood test results or symptoms of blood disorders.',
-                    'doctors' => ['Dr. Alice Wang', 'Dr. Robert Davis']
-                ],
-                [
-                    'name' => 'Radiology',
-                    'icon' => 'fa-x-ray',
-                    'description' => 'Our Radiology department provides diagnostic imaging services including:<br><br>
-• X-rays<br>
-• CT scans<br>
-• MRI<br>
-• Ultrasound<br>
-• Mammography<br><br>
-<strong>When to visit:</strong> When referred by your doctor for diagnostic imaging. We provide essential support for other departments in diagnosing various conditions.',
-                    'doctors' => ['Dr. Peter Kim', 'Dr. Mary Johnson']
-                ]
-            ];
 
-            foreach ($specialties as $index => $specialty) {
-                echo '
-                <div class="col-md-3 col-sm-6">
-                    <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal' . $index . '">
-                        <div class="card-body">
-                            <i class="fa-solid ' . $specialty['icon'] . ' specialty-icon"></i>
-                            <h5 class="card-title">' . $specialty['name'] . '</h5>
-                            <p class="card-text text-muted small">Click for more info</p>
-                        </div>
+            <!-- Specialty Card 0: General Medicine -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal0">
+                    <div class="card-body">
+                        <i class="fa-solid fa-stethoscope specialty-icon"></i>
+                        <h5 class="card-title">General Medicine</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Modal for ' . $specialty['name'] . ' -->
-                <div class="modal fade" id="specialtyModal' . $index . '" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header bg-success text-white">
-                                <h5 class="modal-title">
-                                    <i class="fa-solid ' . $specialty['icon'] . ' me-2"></i>
-                                    ' . $specialty['name'] . '
-                                </h5>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-12 mb-4">
-                                        <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
-                                        <p>' . $specialty['description'] . '</p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
-                                        <div class="row g-3">';
-                                        foreach ($specialty['doctors'] as $doctor) {
-                                            echo '
-                                            <div class="col-md-6">
-                                                <div class="doctor-card p-3 bg-light rounded">
-                                                    <div class="d-flex align-items-center">
-                                                        <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
-                                                        <div>
-                                                            <h6 class="mb-1">' . $doctor . '</h6>
-                                                            <p class="mb-0 small text-muted">' . $specialty['name'] . ' Specialist</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>';
-                                        }
-                                        echo '
-                                        </div>
+            <!-- Specialty Card 1: Pediatrics -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal1">
+                    <div class="card-body">
+                        <i class="fa-solid fa-child specialty-icon"></i>
+                        <h5 class="card-title">Pediatrics</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 2: Cardiology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal2">
+                    <div class="card-body">
+                        <i class="fa-solid fa-heart-pulse specialty-icon"></i>
+                        <h5 class="card-title">Cardiology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 3: Dermatology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal3">
+                    <div class="card-body">
+                        <i class="fa-solid fa-allergies specialty-icon"></i>
+                        <h5 class="card-title">Dermatology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 4: Obstetrics and Gynecology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal4">
+                    <div class="card-body">
+                        <i class="fa-solid fa-person-pregnant specialty-icon"></i>
+                        <h5 class="card-title">Obstetrics and Gynecology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 5: Orthopedics -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal5">
+                    <div class="card-body">
+                        <i class="fa-solid fa-bone specialty-icon"></i>
+                        <h5 class="card-title">Orthopedics</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 6: Psychiatry -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal6">
+                    <div class="card-body">
+                        <i class="fa-solid fa-brain specialty-icon"></i>
+                        <h5 class="card-title">Psychiatry</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 7: Surgery -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal7">
+                    <div class="card-body">
+                        <i class="fa-solid fa-user-doctor specialty-icon"></i>
+                        <h5 class="card-title">Surgery</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 8: Neurology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal8">
+                    <div class="card-body">
+                        <i class="fa-solid fa-head-side-virus specialty-icon"></i>
+                        <h5 class="card-title">Neurology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 9: Ophthalmology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal9">
+                    <div class="card-body">
+                        <i class="fa-solid fa-eye specialty-icon"></i>
+                        <h5 class="card-title">Ophthalmology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 10: Otolaryngology (ENT) -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal10">
+                    <div class="card-body">
+                        <i class="fa-solid fa-ear-listen specialty-icon"></i>
+                        <h5 class="card-title">Otolaryngology (ENT)</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 11: Endocrinology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal11">
+                    <div class="card-body">
+                        <i class="fa-solid fa-flask specialty-icon"></i>
+                        <h5 class="card-title">Endocrinology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 12: Urology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal12">
+                    <div class="card-body">
+                        <i class="fa-solid fa-pills specialty-icon"></i>
+                        <h5 class="card-title">Urology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 13: Oncology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal13">
+                    <div class="card-body">
+                        <i class="fa-solid fa-ribbon specialty-icon"></i>
+                        <h5 class="card-title">Oncology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 14: Pulmonology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal14">
+                    <div class="card-body">
+                        <i class="fa-solid fa-lungs specialty-icon"></i>
+                        <h5 class="card-title">Pulmonology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 15: Rheumatology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal15">
+                    <div class="card-body">
+                        <i class="fa-solid fa-hand specialty-icon"></i>
+                        <h5 class="card-title">Rheumatology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 16: Gastroenterology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal16">
+                    <div class="card-body">
+                        <i class="fa-solid fa-pills specialty-icon"></i>
+                        <h5 class="card-title">Gastroenterology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 17: Nephrology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal17">
+                    <div class="card-body">
+                        <i class="fa-solid fa-hospital-user specialty-icon"></i>
+                        <h5 class="card-title">Nephrology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 18: Hematology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal18">
+                    <div class="card-body">
+                        <i class="fa-solid fa-droplet specialty-icon"></i>
+                        <h5 class="card-title">Hematology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Card 19: Radiology -->
+            <div class="col-md-3 col-sm-6">
+                <div class="specialty-card card text-center h-100" data-bs-toggle="modal" data-bs-target="#specialtyModal19">
+                    <div class="card-body">
+                        <i class="fa-solid fa-x-ray specialty-icon"></i>
+                        <h5 class="card-title">Radiology</h5>
+                        <p class="card-text text-muted small">Click for more info</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal 0: General Medicine -->
+    <div class="modal fade" id="specialtyModal0" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-stethoscope me-2"></i>
+                        General Medicine
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our General Medicine department provides comprehensive primary healthcare services for adults. We handle:<br><br>
+                    • Common illnesses (fever, flu, infections)<br>
+                    • Chronic disease management (diabetes, hypertension)<br>
+                    • Preventive care and health screenings<br>
+                    • Routine check-ups and vaccinations<br><br>
+                    <strong>When to visit:</strong> For general health concerns, regular check-ups, or when you're unsure which specialist to see first.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. John Smith</h6>
+                                        <p class="mb-0 small text-muted">General Medicine Specialist</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Maria Garcia</h6>
+                                        <p class="mb-0 small text-muted">General Medicine Specialist</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>';
-            }
-            ?>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1: Pediatrics -->
+    <div class="modal fade" id="specialtyModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-child me-2"></i>
+                        Pediatrics
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Pediatrics department specializes in the health care of infants, children, and adolescents from birth to age 18. Services include:<br><br>
+                    • Well-child visits and development monitoring<br>
+                    • Childhood immunizations<br>
+                    • Treatment of common childhood illnesses<br>
+                    • Growth and development assessment<br><br>
+                    <strong>When to visit:</strong> For regular check-ups, vaccinations, or when your child is sick or showing concerning symptoms.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Sarah Johnson</h6>
+                                        <p class="mb-0 small text-muted">Pediatrics Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Michael Chen</h6>
+                                        <p class="mb-0 small text-muted">Pediatrics Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Cardiology -->
+    <div class="modal fade" id="specialtyModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-heart-pulse me-2"></i>
+                        Cardiology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Cardiology department focuses on heart and blood vessel conditions. We treat:<br><br>
+                    • Heart disease and heart attacks<br>
+                    • High blood pressure<br>
+                    • Irregular heartbeat (arrhythmia)<br>
+                    • Heart valve problems<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Chest pain or discomfort<br>
+                    • Shortness of breath<br>
+                    • Irregular heartbeat<br>
+                    • Dizziness or fainting<br><br>
+                    <strong>When to visit:</strong> If you experience any heart-related symptoms or have a family history of heart disease.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Robert Williams</h6>
+                                        <p class="mb-0 small text-muted">Cardiology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Emily Brown</h6>
+                                        <p class="mb-0 small text-muted">Cardiology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Dermatology -->
+    <div class="modal fade" id="specialtyModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-allergies me-2"></i>
+                        Dermatology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Dermatology department treats conditions affecting the skin, hair, and nails. We handle:<br><br>
+                    • Acne and other skin conditions<br>
+                    • Skin cancer screening and treatment<br>
+                    • Eczema and psoriasis<br>
+                    • Hair loss problems<br><br>
+                    <strong>When to visit:</strong> If you notice unusual skin changes, persistent rashes, or want a skin cancer screening.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Lisa Anderson</h6>
+                                        <p class="mb-0 small text-muted">Dermatology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. David Kim</h6>
+                                        <p class="mb-0 small text-muted">Dermatology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Obstetrics and Gynecology -->
+    <div class="modal fade" id="specialtyModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-person-pregnant me-2"></i>
+                        Obstetrics and Gynecology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our OB-GYN department provides comprehensive women's healthcare services including:<br><br>
+                    • Pregnancy care and delivery<br>
+                    • Fertility treatments<br>
+                    • Regular women's health screenings<br>
+                    • Menstrual disorders<br>
+                    • Menopause management<br><br>
+                    <strong>When to visit:</strong> For annual check-ups, pregnancy care, or any reproductive health concerns.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Jennifer Lee</h6>
+                                        <p class="mb-0 small text-muted">Obstetrics and Gynecology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Patricia Martinez</h6>
+                                        <p class="mb-0 small text-muted">Obstetrics and Gynecology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Orthopedics -->
+    <div class="modal fade" id="specialtyModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-bone me-2"></i>
+                        Orthopedics
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Orthopedics department specializes in musculoskeletal conditions. We treat:<br><br>
+                    • Joint pain and arthritis<br>
+                    • Sports injuries<br>
+                    • Fractures and sprains<br>
+                    • Back and neck pain<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Persistent joint pain<br>
+                    • Limited range of motion<br>
+                    • Swelling or stiffness<br><br>
+                    <strong>When to visit:</strong> If you have ongoing joint pain, injuries, or mobility issues.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. James Wilson</h6>
+                                        <p class="mb-0 small text-muted">Orthopedics Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Thomas Moore</h6>
+                                        <p class="mb-0 small text-muted">Orthopedics Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Psychiatry -->
+    <div class="modal fade" id="specialtyModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-brain me-2"></i>
+                        Psychiatry
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Psychiatry department provides mental health care and support. We help with:<br><br>
+                    • Depression and anxiety<br>
+                    • Stress management<br>
+                    • Behavioral disorders<br>
+                    • Sleep disorders<br>
+                    • Addiction treatment<br><br>
+                    <strong>When to visit:</strong> If you're experiencing emotional distress, mood changes, anxiety, or other mental health concerns.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Elizabeth Taylor</h6>
+                                        <p class="mb-0 small text-muted">Psychiatry Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Richard White</h6>
+                                        <p class="mb-0 small text-muted">Psychiatry Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7: Surgery -->
+    <div class="modal fade" id="specialtyModal7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-user-doctor me-2"></i>
+                        Surgery
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Surgery department performs various surgical procedures including:<br><br>
+                    • General surgery<br>
+                    • Minimally invasive procedures<br>
+                    • Emergency surgery<br>
+                    • Pre and post-operative care<br><br>
+                    <strong>When to visit:</strong> When referred by your primary care physician or specialist for surgical evaluation.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. William Turner</h6>
+                                        <p class="mb-0 small text-muted">Surgery Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Charles Davis</h6>
+                                        <p class="mb-0 small text-muted">Surgery Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8: Neurology -->
+    <div class="modal fade" id="specialtyModal8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-head-side-virus me-2"></i>
+                        Neurology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Neurology department treats disorders of the nervous system. We handle:<br><br>
+                    • Headaches and migraines<br>
+                    • Seizure disorders<br>
+                    • Multiple sclerosis<br>
+                    • Stroke care<br>
+                    • Memory disorders<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Severe headaches<br>
+                    • Dizziness or balance problems<br>
+                    • Numbness or tingling<br>
+                    • Memory problems<br><br>
+                    <strong>When to visit:</strong> If you experience neurological symptoms or have concerns about brain health.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Andrew Clark</h6>
+                                        <p class="mb-0 small text-muted">Neurology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Susan Wright</h6>
+                                        <p class="mb-0 small text-muted">Neurology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9: Ophthalmology -->
+    <div class="modal fade" id="specialtyModal9" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-eye me-2"></i>
+                        Ophthalmology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Ophthalmology department provides comprehensive eye care services including:<br><br>
+                    • Vision testing and correction<br>
+                    • Cataract surgery<br>
+                    • Glaucoma treatment<br>
+                    • Diabetic eye care<br><br>
+                    <strong>When to visit:</strong> For regular eye check-ups, vision problems, or eye discomfort.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Kevin Park</h6>
+                                        <p class="mb-0 small text-muted">Ophthalmology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Nancy Rodriguez</h6>
+                                        <p class="mb-0 small text-muted">Ophthalmology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10: Otolaryngology (ENT) -->
+    <div class="modal fade" id="specialtyModal10" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-ear-listen me-2"></i>
+                        Otolaryngology (ENT)
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our ENT department treats ear, nose, and throat conditions including:<br><br>
+                    • Hearing problems<br>
+                    • Sinus infections<br>
+                    • Voice disorders<br>
+                    • Sleep apnea<br>
+                    • Allergies<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Hearing loss<br>
+                    • Chronic sinus problems<br>
+                    • Frequent sore throats<br>
+                    • Difficulty swallowing<br><br>
+                    <strong>When to visit:</strong> If you have persistent problems with your ears, nose, or throat.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Daniel Lewis</h6>
+                                        <p class="mb-0 small text-muted">ENT Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Laura Martinez</h6>
+                                        <p class="mb-0 small text-muted">ENT Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 11: Endocrinology -->
+    <div class="modal fade" id="specialtyModal11" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-flask me-2"></i>
+                        Endocrinology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Endocrinology department treats hormone-related disorders including:<br><br>
+                    • Diabetes management<br>
+                    • Thyroid disorders<br>
+                    • Hormone imbalances<br>
+                    • Metabolic disorders<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Unexplained weight changes<br>
+                    • Fatigue<br>
+                    • Excessive thirst<br>
+                    • Temperature sensitivity<br><br>
+                    <strong>When to visit:</strong> If you have hormone-related symptoms or diabetes.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Michelle Wong</h6>
+                                        <p class="mb-0 small text-muted">Endocrinology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Steven Baker</h6>
+                                        <p class="mb-0 small text-muted">Endocrinology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 12: Urology -->
+    <div class="modal fade" id="specialtyModal12" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-pills me-2"></i>
+                        Urology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Urology department specializes in urinary tract and male reproductive system conditions:<br><br>
+                    • Urinary tract infections<br>
+                    • Kidney stones<br>
+                    • Prostate problems<br>
+                    • Bladder issues<br>
+                    • Male fertility concerns<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Frequent urination<br>
+                    • Pain during urination<br>
+                    • Blood in urine<br>
+                    • Lower back pain<br><br>
+                    <strong>When to visit:</strong> If you experience urinary problems or male reproductive health concerns.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Christopher Lee</h6>
+                                        <p class="mb-0 small text-muted">Urology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Amanda Thompson</h6>
+                                        <p class="mb-0 small text-muted">Urology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 13: Oncology -->
+    <div class="modal fade" id="specialtyModal13" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-ribbon me-2"></i>
+                        Oncology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Oncology department provides comprehensive cancer care including:<br><br>
+                    • Cancer diagnosis and staging<br>
+                    • Chemotherapy<br>
+                    • Radiation therapy<br>
+                    • Cancer screening<br>
+                    • Survivorship care<br><br>
+                    <strong>When to visit:</strong> If you have been diagnosed with cancer or need cancer screening.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Rachel Green</h6>
+                                        <p class="mb-0 small text-muted">Oncology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Mark Johnson</h6>
+                                        <p class="mb-0 small text-muted">Oncology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 14: Pulmonology -->
+    <div class="modal fade" id="specialtyModal14" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-lungs me-2"></i>
+                        Pulmonology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Pulmonology department treats respiratory conditions including:<br><br>
+                    • Asthma<br>
+                    • COPD<br>
+                    • Pneumonia<br>
+                    • Sleep apnea<br>
+                    • Lung cancer screening<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Shortness of breath<br>
+                    • Chronic cough<br>
+                    • Wheezing<br>
+                    • Sleep problems<br><br>
+                    <strong>When to visit:</strong> If you have breathing difficulties or persistent respiratory symptoms.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Paul White</h6>
+                                        <p class="mb-0 small text-muted">Pulmonology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Sandra Miller</h6>
+                                        <p class="mb-0 small text-muted">Pulmonology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 15: Rheumatology -->
+    <div class="modal fade" id="specialtyModal15" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-hand me-2"></i>
+                        Rheumatology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Rheumatology department treats autoimmune and joint conditions including:<br><br>
+                    • Rheumatoid arthritis<br>
+                    • Lupus<br>
+                    • Osteoarthritis<br>
+                    • Fibromyalgia<br>
+                    • Gout<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Joint pain and swelling<br>
+                    • Morning stiffness<br>
+                    • Fatigue<br>
+                    • Muscle weakness<br><br>
+                    <strong>When to visit:</strong> If you have persistent joint pain or autoimmune symptoms.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. George Brown</h6>
+                                        <p class="mb-0 small text-muted">Rheumatology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Helen Martinez</h6>
+                                        <p class="mb-0 small text-muted">Rheumatology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 16: Gastroenterology -->
+    <div class="modal fade" id="specialtyModal16" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-pills me-2"></i>
+                        Gastroenterology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Gastroenterology department specializes in digestive system disorders including:<br><br>
+                    • Acid reflux (GERD)<br>
+                    • Inflammatory bowel disease<br>
+                    • Celiac disease<br>
+                    • Liver problems<br>
+                    • Colon cancer screening<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Chronic stomach pain<br>
+                    • Heartburn<br>
+                    • Changes in bowel habits<br>
+                    • Unexplained weight loss<br>
+                    • Difficulty swallowing</p>
+                    <p><strong>When to visit:</strong> If you experience persistent digestive issues or need colon cancer screening.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Frank Wilson</h6>
+                                        <p class="mb-0 small text-muted">Gastroenterology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Diana Clark</h6>
+                                        <p class="mb-0 small text-muted">Gastroenterology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 17: Nephrology -->
+    <div class="modal fade" id="specialtyModal17" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-hospital-user me-2"></i>
+                        Nephrology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Nephrology department focuses on kidney health and diseases including:<br><br>
+                    • Chronic kidney disease<br>
+                    • Kidney stones<br>
+                    • Hypertension<br>
+                    • Dialysis care<br>
+                    • Electrolyte disorders<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Changes in urination<br>
+                    • Swelling in legs or feet<br>
+                    • High blood pressure<br>
+                    • Fatigue<br>
+                    • Lower back pain</p>
+                    <p><strong>When to visit:</strong> If you have kidney problems, persistent urinary issues, or difficult-to-control blood pressure.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Howard Chen</h6>
+                                        <p class="mb-0 small text-muted">Nephrology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Julia Santos</h6>
+                                        <p class="mb-0 small text-muted">Nephrology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 18: Hematology -->
+    <div class="modal fade" id="specialtyModal18" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-droplet me-2"></i>
+                        Hematology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Hematology department treats blood disorders including:<br><br>
+                    • Anemia<br>
+                    • Blood clotting disorders<br>
+                    • Leukemia<br>
+                    • Lymphoma<br>
+                    • Blood cancers<br><br>
+                    <strong>Common symptoms to watch for:</strong><br>
+                    • Unusual bleeding or bruising<br>
+                    • Fatigue<br>
+                    • Weakness<br>
+                    • Frequent infections</p>
+                    <p><strong>When to visit:</strong> If you have abnormal blood test results or symptoms of blood disorders.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Alice Wang</h6>
+                                        <p class="mb-0 small text-muted">Hematology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Robert Davis</h6>
+                                        <p class="mb-0 small text-muted">Hematology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 19: Radiology -->
+    <div class="modal fade" id="specialtyModal19" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-x-ray me-2"></i>
+                        Radiology
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success fw-bold mb-3">About this Specialty</h6>
+                    <p>Our Radiology department provides diagnostic imaging services including:<br><br>
+                    • X-rays<br>
+                    • CT scans<br>
+                    • MRI<br>
+                    • Ultrasound<br>
+                    • Mammography<br><br>
+                    <strong>When to visit:</strong> When referred by your doctor for diagnostic imaging. We provide essential support for other departments in diagnosing various conditions.</p>
+                    <h6 class="text-success fw-bold mb-3">Our Specialists</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Peter Kim</h6>
+                                        <p class="mb-0 small text-muted">Radiology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="doctor-card p-3 bg-light rounded">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-user-doctor text-success me-3 fa-2x"></i>
+                                    <div>
+                                        <h6 class="mb-1">Dr. Mary Johnson</h6>
+                                        <p class="mb-0 small text-muted">Radiology Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/healthcare_appointment_system/register.php" class="btn btn-success">Book Appointment</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- Services Section -->
 <section id="services" class="py-5">
